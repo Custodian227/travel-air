@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - TravelAir</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/shared-layout.css" asp-append-version="true" />
+        <link rel="stylesheet" href=~/css/root.css/ asp-append-version="true">
+        <link rel="stylesheet" href="~/TravelAir.styles.css" asp-append-version="true" />
+
+         <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <script src="https://kit.fontawesome.com/c5546b9ed0.js" crossorigin="anonymous"></script>
+
+    </head> 
+
+    <body>
+
+        <partial name="_SideBarPartial.cshtml"/>
+
+        <div class = "home">
+     
+            <partial name="_HeaderPartial.cshtml"/>
+
+            @RenderBody()
+
+      
+
+
+            <partial name ="_FooterPartial.cshtml"/>
+                
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+
+            @await RenderSectionAsync("Scripts", required: false)
+
+       
+        </div>
+          
+    </body>
+
+</html>
